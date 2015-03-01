@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+<meta charset="utf-8">
+<meta http-eqiuv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AngularPOC Team B</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+
+</head>
+
+<body >
+    <div class="container">    
+        <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div id="forPass"><a href="#">Forgot password?</a></div>
+                    </div>     
+
+                    <div id="pnlBdy"  class="panel-body" >
+
+                        
+                            
+                        <form id="loginform" class="form-horizontal" role="form" action="home.html">
+                                    
+                            <div  class="inpItems input-group ">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="userName" type="text" class="form-control" name="username" value="" placeholder="Your Name" required>                                        
+                                    </div>
+                                
+                            <div  class="inpItems input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="password" type="password" class="form-control" name="password" placeholder="Emp Id" required>
+                                    </div>
+                                    
+
+                                
+                            <div class="input-group">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                        </label>
+                                      </div>
+                                    </div>
+
+					<div class="alert alert-danger alert-error" hidden>
+    					<a href="#" class="close" data-dismiss="alert">&times;</a>
+    					<strong>Error!</strong> Please Check your Username and Password.
+				</div>
+                                <div id="btnDiv"  class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <input id="loginBtn" href="#" type="submit" value="Login" class="btn btn-fresh btn-block btn-success">
+					
+                                    
+
+                                   </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div id="accInfo" >
+                                            Don't have an account! 
+                                        <a href="#" id="signupLink">
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+
+        <div id="signupbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div id="signText"><a id="signinlink" href="#" >Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                
+                                
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="First Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                    
+                              
+
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="submit" class="btn btn-block btn-info btn-fresh"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                         
+                                   </div>
+                                </div>
+                                
+                               
+                                
+                                
+                                
+                            </form>
+                         </div>
+                    </div>
+
+               
+               
+                
+         </div> 
+    </div>
+   <script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/loginPage.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="lib/angular.min.js"></script>
+</body>
+</html>

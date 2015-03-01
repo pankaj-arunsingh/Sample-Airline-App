@@ -1,0 +1,31 @@
+.panel{padding:2%;
+background-image: linear-gradient(to bottom,#F1EDED 0,#1562EB 100%);}
+.padsContainer{
+height: 100%;
+left: 12%;
+}
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}
+body{padding:10%;}
+a.list-group-item {
+    height:auto;
+    min-height:220px;
+}
+a.list-group-item.active small {
+    color:#fff;
+}
+.stars {
+    margin:20px auto 1px;    
+}
+@media all and (max-width: 768px) {
+.panel{
+margin-right:16%;
+}
+body{padding-left:0%;padding-top:20%;}
+}

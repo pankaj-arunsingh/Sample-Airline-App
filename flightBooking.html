@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html ng-app="airline">
+<head>
+<title>Flight search</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/flightBooking.css" />
+<link href="css/mobiscroll.custom-2.6.2.min.css" rel="stylesheet" type="text/css" />
+		
+</head>
+<body>
+<div id="container">
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="row">
+
+<section class="col-sm-4 col-md-6 col-lg-8   padsContainer" ng-controller="PanelController as panel" >
+
+<ul class="nav nav-pills">
+
+<li ng-class="{ active:panel.isSelected(1)}">
+<a href ng-click="panel.selectTab(1)" >Round Trip</a></li>
+
+<li ng-class="{ active:panel.isSelected(2)}">
+<a href ng-click="panel.selectTab(2)" >One Way</a></li>
+
+<li ng-class="{ active:panel.isSelected(3)}">
+<a href ng-click="panel.selectTab(3)" >Customer Support</a></li>
+</ul>
+
+
+<div class="panel" ng-show="panel.isSelected(1)">
+
+<form class="form-horizontal" role="form" action="flightList.html" >
+
+                                    
+                            <div  class="inpItems input-group col-lg-12 col-md-9 col-sm-4">
+                                        
+                                        <input id="source" type="text" class="form-control" name="source"  placeholder="From" required> 
+                                        <input id="leaveDate" type="text" class="form-control" placeholder="Please select leave date" required>
+					<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>                                      
+                                    </div>
+                                
+                            <div  class="inpItems input-group col-lg-12  col-md-9 col-sm-4">
+                                        
+                                        <input id="destination" type="text" class="form-control" name="destination" placeholder="To" required>
+					<input id="returnDate" type="text" class="form-control" placeholder="Please select return date" required>
+					<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+		<div  class="inpItems input-group col-lg-12 col-md-9 col-sm-7 col-xs-12 ">
+                                        
+                                        <select class="form-control">
+   						 <option>Economy(Lowest Fare)</option>
+    						<option>Business(Medium)</option>
+   						 <option>Premium</option>
+ 						 </select>
+                                    </div>
+
+			<div  class="inpItems input-group col-lg-12 col-sm-9 col-md-9 col-xs-12 ">
+                                        
+                                        <input id="passengers" type="number" class="form-control" min="1" max="9"  placeholder="Please enter total Number of passengers." required>
+                                    </div>
+
+                                    
+                                <div id="btnDiv"  class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-lg-offset-1  col-sm-4 col-lg-9 col-md-9 controls">
+                                      <button type="submit"  class="btn btn-fresh btn-block btn-success"> Find Flights</button>
+					
+                                    
+
+                                   </div>
+                                </div>
+
+
+                                
+                            </form>     
+
+	</div>
+		
+			<div class="panel" ng-show="panel.isSelected(2)">
+			<form  class="form-horizontal" role="form" action="flightList.html">
+
+                                     
+                            <div  class="inpItems input-group col-lg-12 col-sm-9 col-md-9 col-xs-12">
+                                        
+                                        <input id="source" type="text" class="form-control" name="source"  placeholder="From" required> 
+                                                                              
+                                    </div>
+                                
+                            <div  class="inpItems input-group col-lg-12 col-sm-9 col-md-9 col-xs-12">
+                                        
+                                        <input id="destination" type="text" class="form-control" name="destination" placeholder="To" required>
+					
+                                    </div>
+					 <div  class="inpItems input-group col-lg-12 col-sm-9 col-md-9 col-xs-12 ">
+
+					<input id="doj" type="text" class="form-control" placeholder="Please select date of journey" required>
+					<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+				</div>
+		<div  class="inpItems input-group col-lg-12 col-sm-9 col-md-9 col-xs-12 ">
+                                        
+                                        <select class="form-control">
+   						 <option>Economy(Lowest Fare)</option>
+    						<option>Business(Medium)</option>
+   						 <option>Premium</option>
+ 						 </select>
+                                    </div>
+
+			<div  class="inpItems input-group col-lg-12 col-sm-9 col-md-9 col-xs-12">
+                                        
+                                        <input id="passengers" type="number" class="form-control" min="1" max="9"  placeholder="Please enter total Number of passengers." required>
+                                    </div>
+
+                                    
+                                <div id="btnDiv"  class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-lg-offset-1  col-sm-4 col-lg-9 col-md-7 controls">
+                                      <button type="submit"  class="btn btn-fresh btn-block btn-success"> Find Flights</button>
+					
+                                    
+
+                                   </div>
+                                </div>
+
+
+                                
+                            </form>  
+
+</div>
+<div class="panel" ng-show="panel.isSelected(3)">
+<div class="row">
+<div class="col-sm-4 col-md-5 col-lg-offset-1 col-lg-8">
+    	    <div class="hero-widget well well-sm">
+                <div class="icon">
+                     <i class="glyphicon glyphicon-user"></i>
+                </div>
+                <div class="text">
+                    <h4>Customer Care</h4></br>
+			Toll Free: 1800987055
+                    
+                </div>
+                
+            </div>
+		</div>
+        <div class="col-sm-4 col-md-5 col-lg-offset-1 col-lg-8">
+            <div class="hero-widget well well-sm">
+                <div class="icon">
+                     <i class="glyphicon glyphicon-user"></i>
+                </div>
+                <div class="text">
+                    <h4>Technical Support</h4></br>
+			Toll Free: 1800987055, 180074537384
+                    
+                </div>
+                
+            </div>
+		</div>
+<div class="col-sm-4 col-md-5 col-lg-offset-1 col-lg-8">
+    	    <div class="hero-widget well well-sm">
+                <div class="icon">
+                     <i class="glyphicon glyphicon-user"></i>
+                </div>
+                <div class="text">
+                    <h4>Cheif Officer</h4></br>
+			Toll Free: 180078575675 ,Mob: +91 901241278
+                    
+                </div>
+                
+            </div>
+		</div>
+		</div>
+		</div>
+</div>
+</section>
+
+</div><!----Row------!>
+</div><!----Container---!>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.js"></script>
+<script src="plugins/mobiscroll.custom-2.6.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/flightBooking.js"></script>
+</body>
+</html>

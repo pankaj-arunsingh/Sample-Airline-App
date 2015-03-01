@@ -1,0 +1,8 @@
+var flightsList=[
+{name:'Jet Airways',price:2000,departure:'oo:50',arrival:'03:00',duration:'2h 10m',stop:'Banglore',image:'images/flight1.jpg',rating:'Average 4.5/5'},
+{name:'Jet Airways',price:2000,departure:'oo:50',arrival:'03:00',duration:'2h 10m',stop:'Banglore',image:'images/flight2.jpg',rating:'Average 4.5/5'},
+{name:'Jet Airways',price:2000,departure:'oo:50',arrival:'03:00',duration:'2h 10m',stop:'Banglore',image:'images/flight3.jpg',rating:'Average 4.5/5'},
+{name:'Jet Airways',price:2000,departure:'oo:50',arrival:'03:00',duration:'2h 10m',stop:'Banglore',image:'images/flight4.jpg',rating:'Average 4.5/5'},
+{name:'Jet Airways',price:2000,departure:'oo:50',arrival:'03:00',duration:'2h 10m',stop:'Banglore',image:'images/flight5.jpg',rating:'Average 4.5/5'},
+{name:'Jet Airways',price:2000,departure:'oo:50',arrival:'03:00',duration:'2h 10m',stop:'Banglore',image:'images/flight6.jpg',rating:'Average 4.5/5'},
+];
